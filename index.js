@@ -23,7 +23,7 @@ app.get("/district",async(req,res)=>{
 app.get("/district/:sid",async(req,res)=>{
     const {sid} = req.params;
     try{
-        const getDistrict = await pool.query("SELECT statename, districtid, districtname from districtdata WHERE stateid =$1", [id]);
+        const getDistrict = await pool.query("SELECT statename, districtid, districtname from districtdata WHERE stateid =$1", [sid]);
         console.log(getDistrict);
         res.json(getDistrict.rows);      
     }catch(err){
