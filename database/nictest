@@ -1,0 +1,367 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 12.4
+-- Dumped by pg_dump version 12.4
+
+-- Started on 2020-09-20 08:38:39
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- TOC entry 2823 (class 1262 OID 16397)
+-- Name: nictest; Type: DATABASE; Schema: -; Owner: postgres
+--
+
+CREATE DATABASE nictest WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'English_United States.1252' LC_CTYPE = 'English_United States.1252';
+
+
+ALTER DATABASE nictest OWNER TO postgres;
+
+\connect nictest
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 203 (class 1259 OID 16400)
+-- Name: districtdata; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.districtdata (
+    id integer NOT NULL,
+    stateid integer,
+    statename text,
+    districtid integer,
+    districtname text
+);
+
+
+ALTER TABLE public.districtdata OWNER TO postgres;
+
+--
+-- TOC entry 202 (class 1259 OID 16398)
+-- Name: districtdata_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public.districtdata_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.districtdata_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2824 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: districtdata_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public.districtdata_id_seq OWNED BY public.districtdata.id;
+
+
+--
+-- TOC entry 2687 (class 2604 OID 16403)
+-- Name: districtdata id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.districtdata ALTER COLUMN id SET DEFAULT nextval('public.districtdata_id_seq'::regclass);
+
+
+--
+-- TOC entry 2817 (class 0 OID 16400)
+-- Dependencies: 203
+-- Data for Name: districtdata; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (1, 28, 'Andhra Pradesh', 2823, 'Chittoor');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (2, 28, 'Andhra Pradesh', 2819, 'Spsr Nellore');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (3, 28, 'Andhra Pradesh', 2813, 'Visakhapatanam');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (4, 28, 'Andhra Pradesh', 2822, 'Anantapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (5, 28, 'Andhra Pradesh', 2816, 'Krishna');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (6, 28, 'Andhra Pradesh', 2812, 'Vizianagaram');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (7, 28, 'Andhra Pradesh', 2821, 'Kurnool');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (8, 28, 'Andhra Pradesh', 2820, 'Y.S.R.');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (9, 28, 'Andhra Pradesh', 2814, 'East Godavari');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (10, 28, 'Andhra Pradesh', 2815, 'West Godavari');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (11, 28, 'Andhra Pradesh', 2817, 'Guntur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (12, 28, 'Andhra Pradesh', 2811, 'Srikakulam');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (13, 28, 'Andhra Pradesh', 2818, 'Prakasam');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (14, 29, 'Karnataka', 2918, 'Tumkur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (15, 29, 'Karnataka', 2905, 'Bidar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (16, 29, 'Karnataka', 2902, 'Bagalkot');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (17, 29, 'Karnataka', 2914, 'Davangere');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (18, 29, 'Karnataka', 2912, 'Bellary');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (19, 29, 'Karnataka', 2932, 'Bangalore Rural');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (20, 29, 'Karnataka', 2908, 'Gadag');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (21, 29, 'Karnataka', 2907, 'Koppal');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (22, 29, 'Karnataka', 2911, 'Haveri');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (23, 29, 'Karnataka', 2906, 'Raichur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (24, 29, 'Karnataka', 2922, 'Mandya');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (25, 29, 'Karnataka', 2915, 'Shimoga');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (26, 29, 'Karnataka', 2930, 'Kolar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (27, 29, 'Karnataka', 2928, 'Gulbarga');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (28, 29, 'Karnataka', 2916, 'Udupi');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (29, 29, 'Karnataka', 2927, 'Chamarajanagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (30, 29, 'Karnataka', 2931, 'Chikballapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (31, 29, 'Karnataka', 2903, 'Bijapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (32, 29, 'Karnataka', 2926, 'Mysore');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (33, 29, 'Karnataka', 2923, 'Hassan');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (34, 29, 'Karnataka', 2901, 'Belgaum');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (35, 29, 'Karnataka', 2913, 'Chitradurga');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (36, 29, 'Karnataka', 2933, 'Ramanagara');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (37, 29, 'Karnataka', 2929, 'Yadgir');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (38, 29, 'Karnataka', 2920, 'Bengaluru Urban');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (39, 29, 'Karnataka', 2917, 'Chikmagalur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (40, 29, 'Karnataka', 2925, 'Kodagu');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (41, 29, 'Karnataka', 2909, 'Dharwad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (42, 29, 'Karnataka', 2910, 'Uttar Kannad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (43, 29, 'Karnataka', 2924, 'Dakshin Kannad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (44, 23, 'Madhya Pradesh', 2323, 'Dewas');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (45, 23, 'Madhya Pradesh', 2355, 'Burhanpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (46, 23, 'Madhya Pradesh', 2335, 'Betul');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (47, 23, 'Madhya Pradesh', 2352, 'Jhabua');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (48, 23, 'Madhya Pradesh', 2328, 'Barwani');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (49, 23, 'Madhya Pradesh', 2348, 'Shahdol');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (50, 23, 'Madhya Pradesh', 2304, 'Gwalior');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (51, 23, 'Madhya Pradesh', 2310, 'Panna');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (52, 23, 'Madhya Pradesh', 2311, 'Sagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (53, 23, 'Madhya Pradesh', 2305, 'Datia');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (54, 23, 'Madhya Pradesh', 2326, 'Indore');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (55, 23, 'Madhya Pradesh', 2338, 'Katni');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (56, 23, 'Madhya Pradesh', 2327, 'Khargone');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (57, 23, 'Madhya Pradesh', 2356, 'AGAR MALWA');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (58, 23, 'Madhya Pradesh', 2330, 'Rajgarh');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (59, 23, 'Madhya Pradesh', 2315, 'Umaria');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (60, 23, 'Madhya Pradesh', 2341, 'Dindori');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (61, 23, 'Madhya Pradesh', 2303, 'Bhind');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (62, 23, 'Madhya Pradesh', 2344, 'Seoni');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (63, 23, 'Madhya Pradesh', 2308, 'Tikamgarh');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (64, 23, 'Madhya Pradesh', 2353, 'Alirajpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (65, 23, 'Madhya Pradesh', 2332, 'Bhopal');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (66, 23, 'Madhya Pradesh', 2333, 'Sehore');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (67, 23, 'Madhya Pradesh', 2322, 'Shajapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (68, 23, 'Madhya Pradesh', 2314, 'Rewa');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (69, 23, 'Madhya Pradesh', 2337, 'Hoshangabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (70, 23, 'Madhya Pradesh', 2354, 'East Nimar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (71, 23, 'Madhya Pradesh', 2357, 'AGARMALWA');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (72, 23, 'Madhya Pradesh', 2309, 'Chhatarpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (73, 23, 'Madhya Pradesh', 2320, 'Ratlam');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (74, 23, 'Madhya Pradesh', 2318, 'Neemuch');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (75, 23, 'Madhya Pradesh', 2319, 'Mandsaur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (76, 23, 'Madhya Pradesh', 2321, 'Ujjain');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (77, 23, 'Madhya Pradesh', 2313, 'Satna');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (78, 23, 'Madhya Pradesh', 2325, 'Dhar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (79, 23, 'Madhya Pradesh', 2349, 'Anuppur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (80, 23, 'Madhya Pradesh', 2302, 'Morena');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (81, 23, 'Madhya Pradesh', 2334, 'Raisen');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (82, 23, 'Madhya Pradesh', 2345, 'Balaghat');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (83, 23, 'Madhya Pradesh', 2342, 'Mandla');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (84, 23, 'Madhya Pradesh', 2340, 'Narsinghpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (85, 23, 'Madhya Pradesh', 2346, 'Guna');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (86, 23, 'Madhya Pradesh', 2339, 'Jabalpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (87, 23, 'Madhya Pradesh', 2301, 'Sheopur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (88, 23, 'Madhya Pradesh', 2306, 'Shivpuri');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (89, 23, 'Madhya Pradesh', 2331, 'Vidisha');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (90, 23, 'Madhya Pradesh', 2351, 'Singrauli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (91, 23, 'Madhya Pradesh', 2350, 'Sidhi');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (92, 23, 'Madhya Pradesh', 2336, 'Harda');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (93, 23, 'Madhya Pradesh', 2312, 'Damoh');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (94, 23, 'Madhya Pradesh', 2347, 'Ashoknagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (95, 23, 'Madhya Pradesh', 2343, 'Chhindwara');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (96, 27, 'Maharashtra', 2711, 'Gondia');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (97, 27, 'Maharashtra', 2717, 'Parbhani');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (98, 27, 'Maharashtra', 2730, 'Solapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (99, 27, 'Maharashtra', 2735, 'Sangli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (100, 27, 'Maharashtra', 2721, 'Thane');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (101, 27, 'Maharashtra', 2722, 'Mumbai Suburban');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (102, 27, 'Maharashtra', 2718, 'Jalna');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (103, 27, 'Maharashtra', 2712, 'Gadchiroli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (104, 27, 'Maharashtra', 2724, 'Raigarh');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (105, 27, 'Maharashtra', 2732, 'Ratnagiri');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (106, 27, 'Maharashtra', 2705, 'Akola');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (107, 27, 'Maharashtra', 2731, 'Satara');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (108, 27, 'Maharashtra', 2720, 'Nashik');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (109, 27, 'Maharashtra', 2703, 'Jalgaon');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (110, 27, 'Maharashtra', 2716, 'Hingoli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (111, 27, 'Maharashtra', 2702, 'Dhule');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (112, 27, 'Maharashtra', 2736, 'Palghar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (113, 27, 'Maharashtra', 2733, 'Sindhudurg');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (114, 27, 'Maharashtra', 2719, 'Aurangabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (115, 27, 'Maharashtra', 2706, 'Washim');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (116, 27, 'Maharashtra', 2723, 'Mumbai');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (117, 27, 'Maharashtra', 2710, 'Bhandara');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (118, 27, 'Maharashtra', 2713, 'Chandrapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (119, 27, 'Maharashtra', 2725, 'Pune');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (120, 27, 'Maharashtra', 2734, 'Kolhapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (121, 27, 'Maharashtra', 2726, 'Ahmednagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (122, 27, 'Maharashtra', 2714, 'Yavatmal');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (123, 27, 'Maharashtra', 2715, 'Nanded');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (124, 27, 'Maharashtra', 2729, 'Osmanabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (125, 27, 'Maharashtra', 2728, 'Latur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (126, 27, 'Maharashtra', 2708, 'Wardha');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (127, 27, 'Maharashtra', 2701, 'Nandurbar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (128, 27, 'Maharashtra', 2707, 'Amravati');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (129, 27, 'Maharashtra', 2709, 'Nagpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (130, 27, 'Maharashtra', 2704, 'Buldhana');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (131, 27, 'Maharashtra', 2727, 'Beed');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (132, 36, 'Telangana', 2803, 'Karimnagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (133, 36, 'Telangana', 2802, 'Nizamabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (134, 36, 'Telangana', 2832, 'Komaram Bheem Asifabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (135, 36, 'Telangana', 2805, 'Hyderabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (136, 36, 'Telangana', 2839, 'Rajanna');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (137, 36, 'Telangana', 2810, 'Khammam');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (138, 36, 'Telangana', 2826, 'Bhadradri');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (139, 36, 'Telangana', 2831, 'Kamareddy');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (140, 36, 'Telangana', 2834, 'Mancherial');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (141, 36, 'Telangana', 2828, 'Jangoan');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (142, 36, 'Telangana', 2801, 'Adilabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (143, 36, 'Telangana', 2843, 'Wanaparthy');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (144, 36, 'Telangana', 2825, 'Medchal');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (145, 36, 'Telangana', 2829, 'Jayashankar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (146, 36, 'Telangana', 2846, 'Yadadri');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (147, 36, 'Telangana', 2838, 'Peddapalli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (148, 36, 'Telangana', 2809, 'Warangal Urban');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (149, 36, 'Telangana', 2824, 'Vikarabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (150, 36, 'Telangana', 2833, 'Mahabubabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (151, 36, 'Telangana', 2827, 'Jagitial');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (152, 36, 'Telangana', 2847, 'MULUGU');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (153, 36, 'Telangana', 2808, 'Nalgonda');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (154, 36, 'Telangana', 2842, 'Suryapet');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (155, 36, 'Telangana', 2806, 'Rangareddy');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (156, 36, 'Telangana', 2835, 'Nagarkurnool');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (157, 36, 'Telangana', 2840, 'Sangareddy');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (158, 36, 'Telangana', 2841, 'Siddipet');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (159, 36, 'Telangana', 2836, 'Nirmal');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (160, 36, 'Telangana', 2845, 'Warangal Rural');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (161, 36, 'Telangana', 2848, 'Narayanpet');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (162, 36, 'Telangana', 2807, 'Mahbubnagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (163, 36, 'Telangana', 2830, 'Jogulamba');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (164, 36, 'Telangana', 2804, 'Medak');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (165, 9, 'Uttar Pradesh', 969, 'Mirzapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (166, 9, 'Uttar Pradesh', 957, 'Maharajganj');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (167, 9, 'Uttar Pradesh', 915, 'Agra');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (168, 9, 'Uttar Pradesh', 929, 'Farrukhabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (169, 9, 'Uttar Pradesh', 904, 'Moradabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (170, 9, 'Uttar Pradesh', 962, 'Mau');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (171, 9, 'Uttar Pradesh', 949, 'Sultanpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (172, 9, 'Uttar Pradesh', 912, 'Aligarh');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (173, 9, 'Uttar Pradesh', 943, 'Pratapgarh');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (174, 9, 'Uttar Pradesh', 950, 'Bahraich');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (175, 9, 'Uttar Pradesh', 919, 'Budaun');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (176, 9, 'Uttar Pradesh', 952, 'Balrampur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (177, 9, 'Uttar Pradesh', 964, 'Jaunpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (178, 9, 'Uttar Pradesh', 934, 'Kanpur Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (179, 9, 'Uttar Pradesh', 910, 'Gautam Buddha Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (180, 9, 'Uttar Pradesh', 965, 'Ghazipur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (181, 9, 'Uttar Pradesh', 963, 'Ballia');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (182, 9, 'Uttar Pradesh', 960, 'Deoria');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (183, 9, 'Uttar Pradesh', 926, 'Unnao');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (184, 9, 'Uttar Pradesh', 937, 'Lalitpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (185, 9, 'Uttar Pradesh', 974, 'Hapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (186, 9, 'Uttar Pradesh', 970, 'Sonbhadra');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (187, 9, 'Uttar Pradesh', 946, 'Barabanki');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (188, 9, 'Uttar Pradesh', 961, 'Azamgarh');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (189, 9, 'Uttar Pradesh', 932, 'Auraiya');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (190, 9, 'Uttar Pradesh', 956, 'Sant Kabeer Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (191, 9, 'Uttar Pradesh', 967, 'Varanasi');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (192, 9, 'Uttar Pradesh', 933, 'Kanpur Dehat');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (193, 9, 'Uttar Pradesh', 907, 'Meerut');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (194, 9, 'Uttar Pradesh', 975, 'Shamli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (195, 9, 'Uttar Pradesh', 916, 'Firozabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (196, 9, 'Uttar Pradesh', 942, 'Fatehpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (197, 9, 'Uttar Pradesh', 911, 'Bulandshahr');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (198, 9, 'Uttar Pradesh', 948, 'Ambedkar Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (199, 9, 'Uttar Pradesh', 939, 'Mahoba');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (200, 9, 'Uttar Pradesh', 953, 'Gonda');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (201, 9, 'Uttar Pradesh', 921, 'Pilibhit');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (202, 9, 'Uttar Pradesh', 920, 'Bareilly');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (203, 9, 'Uttar Pradesh', 971, 'Etah');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (204, 9, 'Uttar Pradesh', 954, 'Siddharth Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (205, 9, 'Uttar Pradesh', 968, 'Sant Ravidas Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (206, 9, 'Uttar Pradesh', 930, 'Kannauj');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (207, 9, 'Uttar Pradesh', 966, 'Chandauli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (208, 9, 'Uttar Pradesh', 959, 'Kushi Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (209, 9, 'Uttar Pradesh', 976, 'Sambhal');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (210, 9, 'Uttar Pradesh', 972, 'Kanshiram Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (211, 9, 'Uttar Pradesh', 947, 'Faizabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (212, 9, 'Uttar Pradesh', 906, 'Jyotiba Phule Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (213, 9, 'Uttar Pradesh', 905, 'Rampur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (214, 9, 'Uttar Pradesh', 955, 'Basti');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (215, 9, 'Uttar Pradesh', 902, 'Muzaffarnagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (216, 9, 'Uttar Pradesh', 923, 'Kheri');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (217, 9, 'Uttar Pradesh', 925, 'Hardoi');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (218, 9, 'Uttar Pradesh', 922, 'Shahjahanpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (219, 9, 'Uttar Pradesh', 914, 'Mathura');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (220, 9, 'Uttar Pradesh', 958, 'Gorakhpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (221, 9, 'Uttar Pradesh', 936, 'Jhansi');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (222, 9, 'Uttar Pradesh', 951, 'Shravasti');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (223, 9, 'Uttar Pradesh', 909, 'Ghaziabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (224, 9, 'Uttar Pradesh', 941, 'Chitrakoot');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (225, 9, 'Uttar Pradesh', 901, 'Saharanpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (226, 9, 'Uttar Pradesh', 928, 'Rae Bareli');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (227, 9, 'Uttar Pradesh', 944, 'Kaushambi');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (228, 9, 'Uttar Pradesh', 913, 'Mahamaya Nagar');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (229, 9, 'Uttar Pradesh', 927, 'Lucknow');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (230, 9, 'Uttar Pradesh', 935, 'Jalaun');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (231, 9, 'Uttar Pradesh', 931, 'Etawah');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (232, 9, 'Uttar Pradesh', 938, 'Hamirpur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (233, 9, 'Uttar Pradesh', 903, 'Bijnor');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (234, 9, 'Uttar Pradesh', 924, 'Sitapur');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (235, 9, 'Uttar Pradesh', 973, 'Amethi');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (236, 9, 'Uttar Pradesh', 908, 'Baghpat');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (237, 9, 'Uttar Pradesh', 945, 'Allahabad');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (238, 9, 'Uttar Pradesh', 940, 'Banda');
+INSERT INTO public.districtdata (id, stateid, statename, districtid, districtname) VALUES (239, 9, 'Uttar Pradesh', 918, 'Mainpuri');
+
+
+--
+-- TOC entry 2825 (class 0 OID 0)
+-- Dependencies: 202
+-- Name: districtdata_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public.districtdata_id_seq', 1, false);
+
+
+--
+-- TOC entry 2689 (class 2606 OID 16408)
+-- Name: districtdata districtdata_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.districtdata
+    ADD CONSTRAINT districtdata_pkey PRIMARY KEY (id);
+
+
+-- Completed on 2020-09-20 08:38:39
+
+--
+-- PostgreSQL database dump complete
+--
+
